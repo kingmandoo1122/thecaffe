@@ -455,28 +455,112 @@ ol.bottom>li:nth-of-type(2n-1){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*  */
 
 
 .submit .inner_content{
-    padding-top:150px;
+    padding-top:200px;
+    padding-bottom: 200px;
+}
+
+
+
+.submit .bigft{
+    font-weight: 500;
+    margin-bottom:100px;
+}
+
+.submit label{
+    font-size: 20px;
+}
+input{
+    height: 35px;
+    font-size: 20px;
+    margin-bottom:40px;
+}
+
+input[id="name"]{
+    width: 30%;
+    
+}
+
+
+input[class="phone"]{
+    width: 9.2%;
+}
+
+input[id="check_yes"]{
+    margin-bottom:0;
+    margin-right:5px
+}
+input[id="check_no"]{
+    margin-bottom:0;
+    margin-right:5px
+}
+
+input[id="place"]{
+    width: 40%;
+}
+input[id="money"]{
+    width: 40%;
+}
+textarea[id="question"]{
+    width: 100%;
+    height: 300px;
+}
+
+.submit h4{
+    margin-top:20px;
+}
+
+.submit div.personal{
+    border:1px solid #333;
+    height: 120px;
+    overflow: auto;
+    padding:5px;
+}
+
+.personal .title{
+    margin-bottom:2px;
+}
+.personal .explain{
+    margin-bottom:8px;
+}
+.personal>ul>li{
+    margin-bottom: 10px;
+}
+
+label[for="agree"]{
+    font-size:16px
+}
+
+.agree{
+    display: flex;
+    align-items: center;
+}
+
+.agree input{
+    margin-bottom: 0;
+    margin-right:10px;
+}
+
+
+input[type="submit"]{
+    height: 50px;
+    width: 300px;
+    border: none;
+    background: #482A25;
+    color: white;
+    margin: 0 auto;
+    display: block;
+    margin-top:30px;
+    cursor: pointer;
+}
+.check{
+    display: flex;
+    align-items: center;
+}
+
+div.check_no{
+    margin-bottom:30px;
 }
