@@ -1622,8 +1622,20 @@ window.addEventListener("wheel",function(e){
 
 
 
+
+
+
+
+
     var swiper = new Swiper(".station_1", {
-      slidesPerView: 5,
+        breakpoints: {
+            1: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 5,
+            },
+          },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -1637,7 +1649,14 @@ window.addEventListener("wheel",function(e){
 
 
     var swiper = new Swiper(".station_2", {
-        slidesPerView: 5,
+        breakpoints: {
+            1: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 5,
+            },
+          },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
@@ -1652,7 +1671,14 @@ window.addEventListener("wheel",function(e){
   
 
     var swiper = new Swiper(".station_3", {
-        slidesPerView: 5,
+        breakpoints: {
+            1: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 5,
+            },
+          },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
@@ -1665,7 +1691,14 @@ window.addEventListener("wheel",function(e){
       })
 
       var swiper = new Swiper(".station_4", {
-        slidesPerView: 5,
+        breakpoints: {
+            1: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 5,
+            },
+          },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
@@ -1678,7 +1711,14 @@ window.addEventListener("wheel",function(e){
       })
 
       var swiper = new Swiper(".station_5", {
-        slidesPerView: 5,
+        breakpoints: {
+            1: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 5,
+            },
+          },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
@@ -1690,7 +1730,14 @@ window.addEventListener("wheel",function(e){
         },
       })
       var swiper = new Swiper(".station_6", {
-        slidesPerView: 5,
+        breakpoints: {
+            1: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 5,
+            },
+          },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,

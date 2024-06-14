@@ -5,6 +5,13 @@ html{
 .point{
     color:#482A25;
 }
+
+
+
+@media (min-width:1024px) {
+    
+
+
 .hugeft{
     font-size:80px;
 }
@@ -16,4 +23,47 @@ html{
 }
 .smallft{
     font-size:20px;
+}
+
+
+}
+
+
+
+@media (max-width:1023px) and (min-width:768px) {
+    .hugeft{
+        font-size:60px;
+    }
+
+.bigft{
+    font-size: 40px;
+}
+
+.midft{
+    font-size:25px;
+}
+.smallft{
+    font-size:18px;
+}
+
+
+}
+
+@media (max-width:767px){
+    .hugeft{
+        font-size:60px;
+    }
+
+.bigft{
+    font-size: 30px;
+}
+
+.midft{
+    font-size:20px;
+}
+.smallft{
+    font-size:16px;
+}
+
+
 }
