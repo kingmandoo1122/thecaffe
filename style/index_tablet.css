@@ -404,6 +404,9 @@ nav:hover .logo{
     color: #482A25;
     cursor: pointer;
 }
+
+
+
 .best_menu_ul>li.on{
     padding: 5px 20px;
     color: white;

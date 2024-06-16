@@ -66,10 +66,10 @@
         
         .cls_btn{
             position: absolute;
-            top: 15%;
+            top: 13%;
             right: 5%;
-            width: 25px;
-            height: 25px;
+            width: 17px;
+            height: 19px;
             background: url(../img/close_btn.svg) no-repeat 50% 50% / contain;
             cursor: pointer;
         }
@@ -94,6 +94,8 @@
             transition: all 0.3s ease 0s;
             opacity: 0;
             pointer-events: none;
+            align-items: flex-start;
+            height: 292px
         }
         
         .menu_popup.show{
@@ -115,10 +117,14 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            padding-top:13px;
         }
         .popup_div table{
-            width: 205%;
+            width: 87%;
             height: 150px;
+            position: absolute;
+            top: 100px;
+            left: 25px;
         }
         .popup_div tr:nth-of-type(2){
             border-top:1px solid #482A25;
@@ -290,10 +296,13 @@
         
         /* 배너 섹션 */
         
+
+        ul.pc{
+            display: none;
+        }
         .bannersec{
             position: relative;
             width: 100%;
-            height: 100vh;
             transition: all 0.3s ease 0s;
         }
         
@@ -316,12 +325,10 @@
         .banner{
             /* 배너 갯수에 따라 곱하는의 값 변화 */
             width: 100%;
-            height: 100vh;
             overflow: hidden;
         }
         .banner li{
             width: 100%;
-            height: 100%;
         }
         
         .banner>.train{
@@ -332,11 +339,14 @@
         }
         .banner img{
             width: 100%;
-            height: 100%;
             object-fit: cover;
         }
+
         
         
+
+
+
         /* .bannersec .more_btn{
             position: absolute;
             bottom:70px;
@@ -393,7 +403,7 @@
             align-items: center;
         }
         .best_menu_ul{
-            margin-top: 80px;
+            margin-top: 50px;
             width: 100%;
             font-weight: 500;
             display: flex;
@@ -409,6 +419,13 @@
             width: 33%;
             text-align: center;
         }
+        .best_menu_ul>li{
+            margin-top:25px;
+        }
+        
+        
+
+
         .best_menu_ul>li.on{
             padding: 5px 2%;
             color: white;
@@ -429,10 +446,10 @@
             font-weight: 400;
             color: rgba(72, 42, 37, 0.6);
             margin-top: 10px;
-            margin-bottom: 10px;
-            padding-bottom: 10px;
+            margin-bottom: 20px;
+            padding-bottom: 18px;
             border-bottom: 1.5px solid #333;
-            font-size:17px;
+            font-size: 15px;
         }
         
         .mid_section>.inner_content{
@@ -537,7 +554,7 @@
         .bot_sec_menu_ul>li>a{
             width: 100%;
             display: block;
-            font-size: 11px;
+            font-size: 13px;
         }
         
         .bot_sec_menu_ul img{
@@ -622,37 +639,39 @@
             padding-top:50px;
             display: flex;
             justify-content: space-between;
-            padding-bottom: 150px;;
+            padding-bottom: 50px;;
+            flex-direction: column;
         }
         
         .coffee_story_rigth_section{
-            margin-left: 35px;
-            width: 55%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
             padding: 30px 0;
+            padding-top:60px;
+
         }
         .coffee_story_rigth_section .bigft{
             font-weight: 500;
+            width: 100%;
+            margin-bottom:30px;
         }
-        
+        .coffee_story_rigth_section p.smallft{
+            line-height: 170%;
+            margin-bottom:30px;
+        }
+        .coffee_story_rigth_section .bigft br{
+            display: none;
+        }
+
         .coffee_story .more_btn{
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 100px;
-            height: 44px;
+            width: 100%;
+            height: 40px;
             border: 1px solid #333;
             border-radius: 40px;
             transition: all 0.2s linear 0s;
         }
         
-        .coffee_story .more_btn:hover{
-            background: #333;
-            color:#fff;
-            font-weight: 400;
-        }
         
         .downtoupani{
             transition: all 0.7s ease 0s;
@@ -686,15 +705,15 @@
         
         
         .roasting_secret{
-            padding-top:100px;
+            padding-top:50px;
             background: #F9F8F7;
-            padding-bottom: 150px;
+            padding-bottom: 80px;
         }
         
         .roasting_secret .bigft{
             font-weight: 500;
             text-align: center;
-            margin-bottom: 100px;
+            margin-bottom: 50px;
         }
         
         .roasting_secret .bigft span{
@@ -705,14 +724,14 @@
             display: flex;
             width: 100%;
             justify-content: space-between;
+            flex-direction: column-reverse;
         }
         .roasting_secret_txt{
-            width: 59%;
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             padding: 20px 0;
-            margin-right: 64px;
         }
         .roasting_secret_txt .midft{
             font-weight: 500;
@@ -722,19 +741,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 265px;
-            height: 44px;
+            width: 100%;
+            height: 40px;
             border: 1px solid #333;
             border-radius: 40px;
-            transition: all 0.2s linear 0s;
         }
         
-        .roasting_secret .more_btn:hover{
-            background: #333;
-            color:#fff;
-            font-weight: 400;
+        .roasting_secret_txt p.smallft{
+            margin-top:20px;
+            margin-bottom: 30px;
         }
-        
+
         
         
         /* 매장찾기 섹션 */
@@ -747,15 +764,20 @@
         .store .inner_content{
             display: flex;
             justify-content: space-between;
-            height: 273px;
             align-items: center;
             font-weight: 300;
+            flex-direction: column-reverse;
+            padding-bottom: 50px;
+    }
         }
         
         .store .inner_content h1{
-            padding-bottom: 35px;
+           padding-top:50px;
+            width: 50%;
         }
-        
+        .store_div .midft{
+            font-size: 30px;
+        }
         
         .store_div .midft span{
             font-weight: 600;
@@ -764,12 +786,18 @@
         .store_div{
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
             padding:10px 0;
-            height: 200px;
+            padding-top:25px;
         }
         
-        
+        .store_div .smallft{
+            margin-top:20px;
+            margin-bottom:20px;
+        }
+
+        .search_store{
+
+        }
         .store input[type="text"]{
             font-size: 16px;
             height: 35px;
@@ -792,20 +820,18 @@
         /* 창업섹션 */
         
         .franchise .inner_content{
-            padding-bottom:150px;
-            padding-top:150px
+            padding-bottom:50px;
+            padding-top:80px
         }
         .franchise .bigft{
             font-weight: 500;
+            margin-bottom:50px;
         }
         
-        .franchise_interview.on{
-            transform: translateY(0);
-            opacity: 1;
-        }
+
         
         .franchise_interview{
-            width: 50%;
+            width: 100%;
             height: 450px;
             padding:25px;
             display: flex;
@@ -813,12 +839,8 @@
             justify-content: center;
             border-radius: 30px;
             color:#fff;
-            position: relative;
-            z-index: -1;
-            transform: translateY(100px);
-            opacity: 0;
-            transition: all 1s ease 0s;
-        
+            margin-bottom:50px;
+            transform: translateY(0);
         }
         .franchise_interview::before{
             content: '';
@@ -882,13 +904,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 265px;
-            height: 44px;
+            width: 100%;
+            height: 40px;
             border: 1px solid #333;
             border-radius: 40px;
             transition: all 0.2s linear 0s;
             margin:0 auto;
-            margin-top:190px;
+            margin-top:50px;
         }
         
         
@@ -907,7 +929,7 @@
         
         .sns .inner_content{
             padding-top:50px;
-            padding-bottom:100px
+            padding-bottom:50px;
         }
         
         .sns .bigft{
@@ -992,30 +1014,42 @@
         
         footer .foot_top{
             height: 150px;
-            display: flex;
             width: 100%;
-            align-items: center;
+            padding-top:30px;
         }
-        
+
+        footer .foot_top>h1{
+            width: 100%;
+            text-align: center;
+            margin-bottom:10px;
+        }
+        footer .foot_top>h1 img{
+            width: 44%;
+        }
         .foot_top>ul{
             font-weight: 500;
             display: flex;
-            width: 600px;
+            width: 100%;
+            flex-wrap: wrap;
             margin:0 auto;
-            justify-content: space-between;
+            justify-content: center;
+            text-align: center;
         }
-        
+        .foot_top>ul>li{
+            margin-left: 25px;
+            margin-right:25px;
+        }
         .foot_line{
             width: 100%;
             left: 0;
-            top: 150px;
+            top: 170px;
             position: absolute;
             display: block;
             border-bottom: 1px solid #333;
         }
         
         .foot_bottom{
-            margin-top:50px;
+            margin-top:55px;
             padding-bottom:50px;
         }
         
@@ -1024,9 +1058,22 @@
             width: 100%;
             justify-content: space-between;
             align-items: center;
+            flex-direction: column;
         }
+
+        .foot_info .info>div>p,address{
+            width: 100%;
+            text-align: center;
+        }
+
+        .copy{
+            text-align: center;
+        }
+
         .info{
-            width:70%;
+            margin-top:15px;
+            width:100%;
+            font-size: 13px;
         }
         .info>dl{
             display: flex;
@@ -1042,7 +1089,7 @@
             font-weight: 500;
         }
         .copy{
-            margin-top:8px;
+            margin-top:5px;
         }
         
         .call>h1{
@@ -1054,14 +1101,20 @@
         }
         .foot_etc{
             width: 100%;
-            margin-top:50px;
+            margin-top:30px;
             display: flex;
             justify-content: space-between;
+            flex-direction: column;
         }
         #onlybr{
             margin-right: 15%;
         }
-        
+        .isms{
+            display: flex;
+            width: 100%;
+
+            
+        }
         .info>dl{
             display: none;
         }
@@ -1093,16 +1146,20 @@
         
         .sns_direct_ul{
             display: flex;
-            width: 100%;
+            width: 45%;
             justify-content: space-between;
         
         }
         
-        .foot_etc>div{
-            width: 58%;
-            font-size: 14px;
+        .foot_etc div{
+            width: 100%;
+            font-size: 12px;
+            margin-left:10px;
         }
-        
+
+        .familyform{
+            width: 45%;
+        }
         .foot_etc select{
             background: #333;
             color:white;
@@ -1114,10 +1171,10 @@
         }
         
         .foot_etc .fortablet{
-            width: 20%;
+            margin-top:50px;
+            width: 100%;
             display: flex;
             justify-content: space-between;
-            flex-direction: column;
         }
         
         

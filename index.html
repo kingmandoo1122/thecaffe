@@ -238,13 +238,16 @@
     <main>
         <section class="bannersec">
             <div>
-                <ul class="banner">
+                <ul class="banner pc">
                     <li><img src="./img/thecaffe_banner_1.svg" alt="더카페배너1"></li>
                     <li><img src="./img/thecaffe_banner_2.jpg" alt="더카페배너2"></li>
                     <li><img src="./img/thecaffe_banner_1.png" alt="더카페배너1"></li>
                 </ul>
-            <div class="inner_content">
-                </div>
+            </div>
+            <div>
+                <ul class="banner mobile">
+                    <li><img src="./img/thecaffe_banner_mobile.png" alt="더카페모바일배너"></li>
+                </ul>
             </div>
         </section>
         <section class="best_menu">
@@ -536,7 +539,7 @@
                     </div>
                     <div class="info">
                         <div>
-                            <p><span>사업자 등록번호</span> : 514-86-0108 <span>호스팅 서비스 제공자</span> : 라드씨엔에스</p>
+                            <p><span>사업자 등록번호</span> : 514-86-0108<br class="special"> <span>호스팅 서비스 제공자</span> : 라드씨엔에스</p>
                             <p><span>회사명 : </span>이랜드이츠 <span>브랜드명 : </span>더카페 <span>대표자명 :</span> 황성윤</p>
                             <address><span>주소 : </span>서울특별시 금천구 가산디지털1로 186, 213(가산동) 제이플라츠</address>
                         </div>
@@ -559,14 +562,16 @@
                     </div>
                 </div>
                 <div class="foot_etc">
-                    <h1><img src="./img/isms.png" alt="isms"></h1>
-                    <div>
-                        <dl>
-                            <dt>인증범위</dt>
-                            <dd>이랜드이츠 온라인 서비스 (애슐리, 캠페인서비스, 홈스토랑, 이랜드이츠, 자연별곡, 더카페)</dd>
-                            <dt>인증기간</dt>
-                            <dd>2022.08.17~2025.08.16</dd>
-                        </dl>
+                    <div class="isms">
+                        <h1><img src="./img/isms.png" alt="isms"></h1>
+                        <div>
+                            <dl>
+                                <dt>인증범위</dt>
+                                <dd>이랜드이츠 온라인 서비스(애슐리, 캠페인서비스, 홈스토랑, 이랜드이츠, 자연별곡, 더카페)</dd>
+                                <dt>인증기간</dt>
+                                <dd>2022.08.17~2025.08.16</dd>
+                            </dl>
+                        </div>
                     </div>
                     <div class="fortablet">
                         <ul class="sns_direct_ul">
@@ -574,7 +579,7 @@
                             <li><a href="#"><img src="./img/sns_facebook.svg" alt="페이스북"></a></li>
                             <li><a href="#"><img src="./img/sns_youtube.svg" alt="유튜브"></a></li>
                         </ul>
-                        <form action="#">
+                        <form class="familyform" action="#">
                             <select>
                                 <option value="">FAMILY SITE</option>
                                 <option value="">애슐리</option>
