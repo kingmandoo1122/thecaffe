@@ -1,0 +1,242 @@
+@media (max-width : 767px) {
+
+        /* 브랜드스토리 메뉴 */
+        
+    
+        
+        
+        
+        
+        /* 더카페소개 첫섹션 */
+        
+        @keyframes introduce_div_move {
+            0%{opacity: 0;
+            transform: translateY(5%);}
+            100%{opacity: 1;
+            transform: translateY(0);}
+        }
+        
+        
+        
+        
+        .introduce{
+            margin-top:100px;
+            width: 100%;
+            background: url(../img/brand_Story/introduce.png) no-repeat 50% 50% /cover;
+            height: 600px;;
+        }
+        
+        .introduce .inner_content{
+            height: 100%;
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+        
+        .introduce_div{
+            width: 500px;
+            margin-right:auto;
+            text-align: right;
+           
+        }
+        .introduce_div .bigft{
+            margin-bottom:30px;
+            font-weight: 500;
+            animation: introduce_div_move 1.3s ease 
+        }
+        .introduce_div .smallft{
+            font-weight: 400;
+            opacity: 0;
+            animation: introduce_div_move 1s ease 0.3s forwards;
+        }
+        
+        /* 비전 섹션 */
+        
+        .vision .inner_content{
+            padding-top:200px;
+            padding-bottom:200px;
+        }
+        
+        .vision .bigft{
+            font-weight: 500;
+            margin-bottom:100px;
+            text-align: center;
+        }
+        
+        .vision ul{
+            display: flex;
+            width: 100%;
+            text-align: center;
+        }
+        
+        
+        .vision_div>h2{
+            font-size:23px;
+            font-weight: 500;
+            margin-bottom:30px;
+        }
+        
+        .circle{
+            padding: 65px;
+            padding-top: 51px;
+                width: 230px;
+                height: 230px;
+                border: 2px solid #333;
+                border-radius: 50%;
+                font-weight: 500;
+                margin-bottom: 50px;
+        }
+        
+        .vision ul>li{
+            flex:1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .vision_div{
+            width: 90%;
+        }
+        
+        
+        .downtoupani{
+            opacity: 0;
+            transform: translateY(5%);
+            transition: all 0.5s ease 0s;
+        }
+        
+        .downtoupani.on{
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        
+        .opacityani{
+            opacity: 0;
+            transition: all 1s ease 0s;
+        }
+        .opacityani.on{
+            opacity: 1;
+        }
+        
+        .opacityani.ver2{
+            transition: all 1s ease 0.1s;
+        }
+        .opacityani.ver3{
+            transition: all 1s ease 0.2s;
+        }
+        
+        
+        
+        
+        /* 커피정보 섹션 */
+        
+        
+        
+        .coffee_info{
+            height: 1000px;
+            background: url(../img/brand_Story/blending.png) no-repeat 50% 50% /cover;;
+        }
+        
+        .coffee_info .inner_content{
+            padding-top:150px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .coffee_info .inner_content>div{
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.7);
+            width: 48%;
+            padding: 15px;
+            backdrop-filter: blur(5px);
+            padding-bottom: 30px;
+        }
+        
+        .blend h3{
+            padding-top:35px;
+            color:rgba(72, 42, 37, 0.5);
+            font-weight: 500;
+        }
+        
+        .blend h2{
+            font-size:35px;
+            font-weight: 500;
+        }
+        
+        
+        .blend p{
+            color:rgba(51, 51, 51, 0.9);
+            font-size: 20px;
+            margin-top:50px;
+            line-height: 170%;
+        }
+        
+        .bean h3{
+            padding-top:35px;
+            color:rgba(72, 42, 37, 0.5);
+            font-weight: 500;
+        }
+        
+        .bean h2{
+            font-size:35px;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+        
+        .bean table{
+            border-collapse: collapse;
+            width: 100%;
+        
+        }
+        
+        .bean table tr{
+            padding:30px 0;
+        }
+        
+        .bean table tr>*{
+            padding:10px 0;
+        }
+        
+        .bean table tr:nth-of-type(1){
+            background: #482A25;
+            color:#fff;
+        }
+        
+        .bean table tr:nth-of-type(1)>th{
+            font-weight: 500;
+        }
+        
+        .bean table tr>th:nth-of-type(1){
+            border-right:1px solid rgba(72, 42, 37, 0.5)
+        }
+        .bean table tr.title>th:nth-of-type(1){
+            border-right:1px solid white;
+        }
+        
+        .bean table tr{
+            background: #D9D9D9;
+        }
+        .bean table tr>td{
+            padding-left: 10px;
+        }
+        
+        .bean tr.white{
+            background: #fff;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+    
+}

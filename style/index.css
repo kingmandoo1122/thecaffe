@@ -162,6 +162,12 @@ html {
 
 
 
+#nav_mo{
+    display: none;
+}
+
+
+
 nav{
     z-index:100;    
     color:white;
@@ -282,6 +288,11 @@ nav:hover .logo{
 
 
 /* 배너 섹션 */
+
+.banner.mobile{
+    display: none;
+}
+
 
 .bannersec{
     position: relative;
@@ -1063,7 +1074,8 @@ footer .foot_top{
 }
 
 .foot_etc>div{
-    width: 58%;
+    display: flex;
+        width: 62%;
 }
 
 .foot_etc .fortablet{

@@ -8,22 +8,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/index_tablet.css">
+    <link rel="stylesheet" href="./style/index_mobile.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/font.css">
     <link rel="stylesheet" href="./style/brand_story.css">
+    <link rel="stylesheet" href="./style/brand_story_tablet.css">
+    <link rel="stylesheet" href="./style/brand_story_mobile.css">
     <script src="./js/brand_story.js"></script>
 </head>
 <body>
-    <header>
+    <header id="nav_pc">
         <nav>
             <div class="inner_content">
                 <div class="lnb">
                     <a href="index.html" class="logo"></a>
                     <ul class="nav_ul">
-                        <li><a class="on" href="brand_story.html">더카페 스토리</a>
+                        <li><a href="brand_story.html">더카페 스토리</a>
                             <ul>
-                                <li><a class="on" href="brand_story.html">더카페 소개</a></li>
+                                <li><a href="brand_story.html">더카페 소개</a></li>
                                 <li><a href="brand_story.html">더카페 커피</a></li>
                                 <li><a href="brand_story.html">로스팅팩토리</a></li>
                                 <li><a href="brand_story.html">찾아오시는 길</a></li>
@@ -59,6 +63,73 @@
                                 <li><a href="#">매장 찾기</a></li>
                             </ul>
                         </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <header id="nav_mo">
+        <nav>
+            <div class="nav_sns">
+                <h1>Follow Us</h1>
+                <ul>
+                    <li><a href="#"><img src="./img/nav_facebook.svg" alt="페이스북"></a></li>
+                    <li><a href="#"><img src="./img/nav_instagram.svg" alt="인스타그램"></a></li>
+                    <li><a href="#"><img src="./img/nav_youtube.svg" alt="유튜브"></a></li>
+                </ul>
+            </div>
+            <div class="modal"></div>
+            <span class="open_nav on"></span>
+            <span class="close_nav"></span>
+            <div class="inner_content">
+                <div class="lnb">
+                    <a href="index.html" class="logo"></a>
+                    <ul class="nav_ul">
+                        <span class="line"></span>
+                        <li><a class="" href="brand_story.html">더카페 스토리</a><span class="nav_more on"></span>
+                            <ul>
+                                
+                                <li><a href="brand_story.html">더카페 소개</a></li>
+                                <li><a href="brand_story.html">더카페 커피</a></li>
+                                <li><a href="brand_story.html">로스팅팩토리</a></li>
+                                <li><a href="brand_story.html">찾아오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">더카페 메뉴</a>
+                            <span class="nav_more"></span>
+                            <ul>
+                                <li><a href="#">시즌 메뉴</a></li>
+                                <li><a href="#">음료 메뉴</a></li>
+                                <li><a href="#">디저트 메뉴</a></li>
+                                <li><a href="#">시그니처 메뉴</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="franchise.html">창업 안내</a>
+                            <span class="nav_more"></span>
+                            <ul>
+                                <li><a href="franchise.html">더카페 경쟁력</a></li>
+                                <li><a href="franchise.html">가맹 안내</a></li>
+                                <li><a href="franchise.html">인테리어</a></li>
+                                <li><a href="franchise.html">가맹 비용</a></li>
+                                <li><a href="franchise.html">창업스토리</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">더카페 소식</a>
+                            <span class="nav_more"></span>
+                            <ul>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#">인테리어</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">매장 안내</a>
+                            <span class="nav_more"></span>
+                            <ul>
+                                <li><a href="#">매장 찾기</a></li>
+                            </ul>
+                        </li>
+                        <span class="line_two"></span>
                     </ul>
                 </div>
             </div>
@@ -205,6 +276,11 @@
                         <h1 class="midft">고객센터<span> 1670-1558</span></h1>
                     </div>
                     <div class="info">
+                        <div>
+                            <p><span>사업자 등록번호</span> : 514-86-0108<br class="special"> <span>호스팅 서비스 제공자</span> : 라드씨엔에스</p>
+                            <p><span>회사명 : </span>이랜드이츠 <span>브랜드명 : </span>더카페 <span>대표자명 :</span> 황성윤</p>
+                            <address><span>주소 : </span>서울특별시 금천구 가산디지털1로 186, 213(가산동) 제이플라츠</address>
+                        </div>
                         <dl>
                             <dt>사업자 등록번호 : </dt>
                             <dd> 514-86-0108</dd>
@@ -216,7 +292,7 @@
                             <dt>브랜드명 :</dt>
                             <dd>더카페</dd>
                             <dt>대표자명 :</dt>
-                            <dd>황성윤</dd>
+                            <dd id="onlybr">황성윤</dd>
                             <dt>주소 :</dt>
                             <dd><address>서울특별시 금천구 가산디지털1로 186, 213(가산동) 제이플라츠</address></dd>
                         </dl>
@@ -224,28 +300,32 @@
                     </div>
                 </div>
                 <div class="foot_etc">
-                    <h1><img src="./img/isms.png" alt="isms"></h1>
-                    <div>
-                        <dl>
-                            <dt>인증범위</dt>
-                            <dd>이랜드이츠 온라인 서비스 (애슐리, 캠페인서비스, 홈스토랑, 이랜드이츠, 자연별곡, 더카페)</dd>
-                            <dt>인증기간</dt>
-                            <dd>2022.08.17~2025.08.16</dd>
-                        </dl>
+                    <div class="isms">
+                        <h1><img src="./img/isms.png" alt="isms"></h1>
+                        <div>
+                            <dl>
+                                <dt>인증범위</dt>
+                                <dd>이랜드이츠 온라인 서비스(애슐리, 캠페인서비스, 홈스토랑, 이랜드이츠, 자연별곡, 더카페)</dd>
+                                <dt>인증기간</dt>
+                                <dd>2022.08.17~2025.08.16</dd>
+                            </dl>
+                        </div>
                     </div>
-                    <ul class="sns_direct_ul">
-                        <li><a href="#"><img src="./img/sns_instagram.svg" alt="인스타그램"></a></li>
-                        <li><a href="#"><img src="./img/sns_facebook.svg" alt="페이스북"></a></li>
-                        <li><a href="#"><img src="./img/sns_youtube.svg" alt="유튜브"></a></li>
-                    </ul>
-                    <form action="#">
-                        <select>
-                            <option value="">FAMILY SITE</option>
-                            <option value="">애슐리</option>
-                            <option value="">자연별곡</option>
-                            <option value="">Elandeats</option>
-                        </select>
-                    </form>
+                    <div class="fortablet">
+                        <ul class="sns_direct_ul">
+                            <li><a href="#"><img src="./img/sns_instagram.svg" alt="인스타그램"></a></li>
+                            <li><a href="#"><img src="./img/sns_facebook.svg" alt="페이스북"></a></li>
+                            <li><a href="#"><img src="./img/sns_youtube.svg" alt="유튜브"></a></li>
+                        </ul>
+                        <form class="familyform" action="#">
+                            <select>
+                                <option value="">FAMILY SITE</option>
+                                <option value="">애슐리</option>
+                                <option value="">자연별곡</option>
+                                <option value="">Elandeats</option>
+                            </select>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

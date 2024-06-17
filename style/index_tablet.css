@@ -164,6 +164,9 @@ html {
 /* 헤더,메뉴바 */
 
 
+#nav_mo{
+    display: none;
+}
 
 nav{
     z-index:100;    
@@ -286,6 +289,10 @@ nav:hover .logo{
 
 
 /* 배너 섹션 */
+
+.banner.mobile{
+    display: none;
+}
 
 .bannersec{
     position: relative;
@@ -1058,17 +1065,10 @@ footer .foot_top{
 }
 .info>div span{
     font-weight: 500;
-    margin-left:15px;
 }
 .info>div span:nth-of-type(1){
     margin: 0;
 }
-
-
-
-
-
-
 
 
 
@@ -1085,8 +1085,9 @@ footer .foot_top{
 }
 
 .foot_etc>div{
-    width: 58%;
+    width: 74%;
     font-size: 14px;
+    display: flex;
 }
 
 .foot_etc select{
@@ -1107,7 +1108,9 @@ footer .foot_top{
 }
 
 
-
+span.special{
+    display: none;
+}
 
 
 

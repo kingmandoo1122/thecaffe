@@ -1,6 +1,4 @@
-@media (min-width : 1024px) {
-    
-
+@media (max-width :1023px) and (min-width : 768px){
 
 /* 브랜드스토리 메뉴 */
 
@@ -93,13 +91,14 @@ nav .logo{
 }
 
 .circle{
-    padding: 90px;
-    width: 330px;
-    height: 330px;
-    border:2px solid #333;
-    border-radius: 50%;
-    font-weight: 500;
-    margin-bottom:50px;
+    padding: 65px;
+    padding-top: 51px;
+        width: 230px;
+        height: 230px;
+        border: 2px solid #333;
+        border-radius: 50%;
+        font-weight: 500;
+        margin-bottom: 50px;
 }
 
 .vision ul>li{
@@ -160,10 +159,10 @@ nav .logo{
 .coffee_info .inner_content>div{
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.7);
-    width: 560px;
-    padding:30px;
-    height: 650px;
+    width: 48%;
+    padding: 15px;
     backdrop-filter: blur(5px);
+    padding-bottom: 30px;
 }
 
 .blend h3{
@@ -237,5 +236,28 @@ nav .logo{
 .bean tr.white{
     background: #fff;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

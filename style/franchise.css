@@ -1,5 +1,7 @@
 /* 프랜차이즈 메뉴 */
 
+@media (min-width : 1024px) {
+    
 
 nav {
     z-index: 100;
@@ -563,4 +565,15 @@ input[type="submit"]{
 
 div.check_no{
     margin-bottom:30px;
+}
+
+
+
+
+
+
+
+
+
+
 }
