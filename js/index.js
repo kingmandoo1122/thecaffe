@@ -37,8 +37,6 @@ window.onload =function(){
 
     let franchise_interview = document.querySelectorAll(".franchise_interview")
 
-  
-    let nav = document.querySelector("nav")
 
     let sns_ul = document.querySelectorAll(".sns_ul")
     let bannersec = document.querySelector(".bannersec")
@@ -101,6 +99,11 @@ window.addEventListener("scroll",function(){
 
 // 스크롤 방향감지후 숨기기,나타내기 
 
+
+let nav = document.querySelector("nav")
+let mo_nav= document.querySelector("#nav_mo>nav")
+// 스크롤 방향감지후 숨기기,나타내기 
+
 let num_up = 0
 let num_down = 0
 window.addEventListener("wheel",function(e){
@@ -122,9 +125,27 @@ window.addEventListener("wheel",function(e){
 
 })
 
+window.addEventListener("wheel",function(e){
+    let checkwheeldirection = e.deltaY
+
+    if(checkwheeldirection>0){
+        num_up++
+        if(num_up>2){
+            mo_nav.classList.add("hide")
+            num_up=0
+        }
+    }
+    if(checkwheeldirection<0){
+        num_down++
+        if(num_down>2){
+            mo_nav.classList.remove("hide")
+        }
+    }
+
+})
 
 
- 
+
 
     let img_list_0 = [
         `<img src="./img/menu_drink_caffe_latte/Americano.png" alt="아메리카노">`,
@@ -1631,30 +1652,43 @@ window.addEventListener("wheel",function(e){
     let open_nav = document.querySelector(".open_nav")
     let close_nav = document.querySelector(".close_nav")
     let nav_sns = document.querySelector(".nav_sns")
+    let line = document.querySelector(".line")
+    let line_two = document.querySelector(".line_two")
+    let mo_modal = document.querySelector("#nav_mo .modal")
 
     open_nav.addEventListener("click",function(){
         mo_nav_ul.style.right = `0`
         close_nav.classList.add("on")
         open_nav.classList.remove("on")
         body.classList.add("lock")
-        modal.classList.add("show")
+        mo_modal.classList.add("show")
         nav_sns.style.right = `0`
+        line.style.right =`0`
+        line_two.style.right =`0`
+        mo_nav.classList.add("on")
     })
     close_nav.addEventListener("click",function(){
         mo_nav_ul.style.right = `-100%`
         open_nav.classList.add("on")
         close_nav.classList.remove("on")
         body.classList.remove("lock")
-        modal.classList.remove("show")
+        mo_modal.classList.remove("show")
         nav_sns.style.right = `-100%`
+        line.style.right = `-100%`
+        line_two.style.right = `-100%`
+        mo_nav.classList.remove("on")
     })
 
+    for(let i=0;i<nav_ul_li_a.length;i++){
+    nav_ul_li_a[i].addEventListener("click",function(e){
+        e.preventDefault()
+    })
+}
 
 
 
-
-    for (let i = 0; i < mo_nav_ul_li.length; i++) {
-        mo_nav_ul_li[i].addEventListener("click", function() {
+    for (let i = 0; i < nav_more.length; i++) {
+        nav_more[i].addEventListener("click", function() {
                 if (count_list[i] == 0) {
                     mo_nav_ul_li[i].style.height = `${mo_nav_ul_li_ul[i].offsetHeight}px`;
                     nav_ul_li_a[i].classList.add("on");
@@ -1662,14 +1696,14 @@ window.addEventListener("wheel",function(e){
         
                     for (let j = 0; j < nav_more.length; j++) {
                         if (i !== j) {
-                            mo_nav_ul_li[j].style.height = `5%`;
+                            mo_nav_ul_li[j].style.height = `4%`;
                             nav_ul_li_a[j].classList.remove("on");
                             count_list[j] = 0;
                         }
                     }
     
                 } else if (count_list[i] == 1) {
-                    mo_nav_ul_li[i].style.height = `5%`;
+                    mo_nav_ul_li[i].style.height = `4%`;
                     nav_ul_li_a[i].classList.remove("on");
                     count_list[i] = 0;
                 }

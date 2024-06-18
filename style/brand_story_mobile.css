@@ -20,7 +20,7 @@
         
         
         .introduce{
-            margin-top:100px;
+            margin-top: 10%;
             width: 100%;
             background: url(../img/brand_Story/introduce.png) no-repeat 50% 50% /cover;
             height: 600px;;
@@ -34,37 +34,35 @@
         }
         
         .introduce_div{
-            width: 500px;
-            margin-right:auto;
-            text-align: right;
            
         }
         .introduce_div .bigft{
             margin-bottom:30px;
             font-weight: 500;
-            animation: introduce_div_move 1.3s ease 
+            animation: introduce_div_move 1.3s ease ;
+            font-size: 30px;
         }
         .introduce_div .smallft{
             font-weight: 400;
             opacity: 0;
             animation: introduce_div_move 1s ease 0.3s forwards;
         }
-        
+        .introduce_div .smallft br{
+            display: none;
+        }
         /* 비전 섹션 */
         
         .vision .inner_content{
-            padding-top:200px;
-            padding-bottom:200px;
-        }
+            padding-top:100px;
+            padding-bottom:50px;        }
         
         .vision .bigft{
             font-weight: 500;
-            margin-bottom:100px;
+            margin-bottom:50px;
             text-align: center;
         }
         
         .vision ul{
-            display: flex;
             width: 100%;
             text-align: center;
         }
@@ -88,13 +86,13 @@
         }
         
         .vision ul>li{
-            flex:1;
+           margin-bottom: 50px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
         .vision_div{
-            width: 90%;
+            width: 100%;
         }
         
         
@@ -133,22 +131,21 @@
         
         
         .coffee_info{
-            height: 1000px;
             background: url(../img/brand_Story/blending.png) no-repeat 50% 50% /cover;;
         }
         
         .coffee_info .inner_content{
-            padding-top:150px;
-            display: flex;
-            justify-content: space-between;
+            padding-top:100px;
+            padding-bottom: 50px;
         }
         .coffee_info .inner_content>div{
             border-radius: 20px;
             background: rgba(255, 255, 255, 0.7);
-            width: 48%;
+            width: 100%;
             padding: 15px;
             backdrop-filter: blur(5px);
             padding-bottom: 30px;
+            margin-bottom: 70px;
         }
         
         .blend h3{
@@ -158,26 +155,26 @@
         }
         
         .blend h2{
-            font-size:35px;
+            font-size:25px;
             font-weight: 500;
         }
         
         
         .blend p{
             color:rgba(51, 51, 51, 0.9);
-            font-size: 20px;
+            font-size: 16px;
             margin-top:50px;
             line-height: 170%;
         }
         
         .bean h3{
-            padding-top:35px;
+            padding-top:10px;
             color:rgba(72, 42, 37, 0.5);
             font-weight: 500;
         }
         
         .bean h2{
-            font-size:35px;
+            font-size:25px;
             font-weight: 500;
             margin-bottom: 30px;
         }
@@ -185,6 +182,7 @@
         .bean table{
             border-collapse: collapse;
             width: 100%;
+            height: 630px;
         
         }
         
@@ -206,7 +204,8 @@
         }
         
         .bean table tr>th:nth-of-type(1){
-            border-right:1px solid rgba(72, 42, 37, 0.5)
+            border-right: 1px solid rgba(72, 42, 37, 0.5);
+            width: 33%;
         }
         .bean table tr.title>th:nth-of-type(1){
             border-right:1px solid white;

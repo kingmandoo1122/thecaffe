@@ -22,15 +22,15 @@
         
         /* sub-common */
         .common_sub .inner_content{
-            padding-top:200px;
+            padding-top:30%;
         }
         
         .common_sub ul{
             display: flex;
             align-items: center;
-            width: 300px;
+            width: 250px;
             justify-content: space-between;
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 600;
         }
         .common_sub li:nth-of-type(2){
@@ -40,7 +40,9 @@
             color:rgba(72, 42, 37, 0.9)
         }
         
-        
+        a.now{
+            color:#482A25
+        }
         
         
         
@@ -192,56 +194,54 @@
         }
 
         
-
+        #nav_mo{
+            overflow: hidden;
+        }
 
         nav{
             background: #F9F8F7;
             z-index:100;    
             color:#333;
-            height:80px;
+            height:10%;
             position:fixed;
             width: 100vw;
             transition: all 0.3s ease-in-out 0s;
         }
         
         
-        nav.on{
-            color:#333;
-            background: rgba(249, 248, 247, 0.9);
+
+        
+        nav .inner_content{
+            height: 100%;
+            overflow: hidden;
         }
-        
-        
-        
-        nav.on .logo {
-            width: 180px;
-            height: 50px;
-            background: url(../img/thecaffe_logo_black.svg) no-repeat 50% 50% / contain;
-        }
-        
-        
         nav.hide{
             height:0px;
         }
+        nav.on{
+            height: 10%;
+        }
+        
         .logo{
             transition: all 0.5s ease 0s;
-            width: 180px;
-            height:50px;
-            background: url(../img/thecaffe_logo_black.svg) no-repeat 50% 50% / contain;
+        width: 40%;
+        height: 50px;
+        background: url(../img/thecaffe_logo_black.svg) no-repeat 50% 50% / contain;
         }
         .lnb{
         
             width: 100%;
-            padding-top:15px;
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
+            align-items:center;
+            height: 100%;
         }
 
         .open_nav{
             opacity: 0;
             pointer-events: none;
-            width: 25px;
-            height: 25px;
+            width: 6%;
+            height: 27%;
             transform: translate(-50%, -50%);
             position: absolute;
             top: 50%;
@@ -263,8 +263,8 @@
         .close_nav.on{
             opacity: 1;
             pointer-events:auto;
-            width: 25px;
-            height: 25px;
+            width: 6%;
+            height: 27%;
             transform: translate(-50%, -50%);
             position: absolute;
             top: 50%;
@@ -276,32 +276,34 @@
         }
 
         .line{
-            top: 80px;
-            left: 0;
+            top: 100%;
+            right:-100%;
             position: absolute;
             display: block;
-            width: 100%;
+            width: 80%;
             background: #ebebeb;
             height: 1px;
             z-index: 1000000000;
+            transition: all 0.5s ease 0s;
         }
     
 
         .line_two{
-            top: 580px;
-            left: 0;
+            right:-100%;
+            top: 793%;
             position: absolute;
             display: block;
-            width: 100%;
+            width: 80%;
             background: #ebebeb;
             height: 1px;
             z-index: 1000000000;
+            transition: all 0.5s ease 0s;
         }
 
         .nav_sns{
             z-index: 5200;
             position: absolute;
-            top: 800%;
+            top: 820%;
             right:-100%;
             width: 64%;
             transition: all 0.5s ease 0s;
@@ -347,7 +349,7 @@
             width: 80%;
             position: absolute;
             background: #fff;
-            height: 90vh;
+            height: 100vh;
             top:0;
             padding-top:120px;
             right:-100%;
@@ -362,11 +364,12 @@
             position: relative;
             /* width: auto; */
             margin-left: auto;
-            height: 5%;
+            height: 4%;
             /* padding-bottom: 20px; */
             transition: all 0.5s ease 0s;
             overflow: hidden;
             margin-bottom: 25px;
+            cursor: pointer;
         }
         .nav_ul>li>a.on{
             color:#482A25
@@ -512,7 +515,7 @@
         .top_section>.inner_content{
             display: flex;
             align-items: center;
-            padding-top:100px;
+            padding-top:50px;
             flex-direction: column;
         }
         
@@ -533,7 +536,7 @@
             align-items: center;
         }
         .best_menu_ul{
-            margin-top: 50px;
+            margin-top: 30px;
             width: 100%;
             font-weight: 500;
             display: flex;
@@ -703,14 +706,14 @@
         }
         
         .bot_section{
-            padding-top: 21px;
+            padding-top: 15px;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 181px;
+            height: 200px;
             background: #F9F8F7;
             padding-bottom: 9px;
-            margin-top:85px;
+            margin-top: 85px;
         }
         
         
@@ -970,7 +973,9 @@
             border-radius: 30px;
             color:#fff;
             margin-bottom:50px;
-            transform: translateY(0);
+            transform: translateY(10%);
+            transition: all 0.5s ease 0s;
+            opacity: 0;
         }
         .franchise_interview::before{
             content: '';
@@ -988,7 +993,7 @@
         }
         
         .franchise_interview>h2{
-            font-size:30px;
+            font-size:20px;
         }
         .franchise_interview p:nth-of-type(2){
             display: -webkit-box;        /* Flexbox를 기반으로 한 블록 요소로 설정 */
@@ -999,7 +1004,7 @@
         }
         .franchise_interview>p{
             width: 100%;
-            font-size:20px;
+            font-size:16px;
         }
         
         
@@ -1012,6 +1017,16 @@
             background: rgba(56, 45, 43, 0.7)
         }
         
+
+        .franchise_interview.on{
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+
+
+
+
         .franchise_interview.second{
             background: url(../img/franchise_second.png) no-repeat 50% 50% / cover;
             top: 70px;
@@ -1065,6 +1080,7 @@
         .sns .bigft{
             text-align: center;
             font-weight: 500;
+            font-size: 25px;
         }
         .sns .midft{
             text-align: center;
@@ -1143,9 +1159,9 @@
         }
         
         footer .foot_top{
-            height: 150px;
+            height: 115px;
             width: 100%;
-            padding-top:30px;
+            padding-top: 25px;
         }
 
         footer .foot_top>h1{
@@ -1157,6 +1173,7 @@
             width: 44%;
         }
         .foot_top>ul{
+            font-size: 12px;
             font-weight: 500;
             display: flex;
             width: 100%;
@@ -1166,13 +1183,13 @@
             text-align: center;
         }
         .foot_top>ul>li{
-            margin-left: 25px;
-            margin-right:25px;
+            margin-left: 15px;
+            margin-right: 15px;
         }
         .foot_line{
             width: 100%;
             left: 0;
-            top: 170px;
+            top: 144px;
             position: absolute;
             display: block;
             border-bottom: 1px solid #333;

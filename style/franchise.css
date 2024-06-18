@@ -216,11 +216,16 @@ nav .logo{
     font-weight: 500;
 }
 .success_ul>li{
-    width: 42%;
+    width: 45%;
     margin-right:auto;
     background: #fff;
     margin-bottom:100px;
 }
+.success_ul>li:nth-of-type(2n){
+    margin-right: 0;
+}
+
+
 
 .success_ul>li h1{
     font-size: 30px;
@@ -243,9 +248,24 @@ nav .logo{
     line-height: 170%;
 }
 
+.success_franchise.mobile{
+    display: none;
+}
+
+
 
 
 /* 단계 섹션 */
+
+
+
+
+.level.mobile{
+    display: none;
+}
+
+
+
 
 .level .inner_content{
     padding-top:150px;
