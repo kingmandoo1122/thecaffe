@@ -119,34 +119,6 @@ close_nav.addEventListener("click",function(){
 })
 
 
-
-for (let i = 0; i < nav_more.length; i++) {
-    nav_more[i].addEventListener("click", function() {
-            if (count_list[i] == 0) {
-                mo_nav_ul_li[i].style.height = `${mo_nav_ul_li_ul[i].offsetHeight}px`;
-                nav_ul_li_a[i].classList.add("on");
-                count_list[i] = 1;
-    
-                for (let j = 0; j < nav_more.length; j++) {
-                    if (i !== j) {
-                        mo_nav_ul_li[j].style.height = `4%`;
-                        nav_ul_li_a[j].classList.remove("on");
-                        count_list[j] = 0;
-                    }
-                }
-
-            } else if (count_list[i] == 1) {
-                mo_nav_ul_li[i].style.height = `4%`;
-                nav_ul_li_a[i].classList.remove("on");
-                count_list[i] = 0;
-            }
-        });
-    }
-
-
-
-
-
 for (let i = 0; i < nav_more.length; i++) {
     nav_more[i].addEventListener("click", function() {
             if (count_list[i] == 0) {

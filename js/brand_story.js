@@ -126,6 +126,9 @@ close_nav.addEventListener("click",function(){
 })
 
 
+
+
+
 for (let i = 0; i < nav_more.length; i++) {
     nav_more[i].addEventListener("click", function() {
             if (count_list[i] == 0) {
@@ -148,8 +151,6 @@ for (let i = 0; i < nav_more.length; i++) {
             }
         });
     }
-
-
 
 
 
