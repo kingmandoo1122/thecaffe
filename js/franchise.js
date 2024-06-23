@@ -159,7 +159,6 @@ for (let i = 0; i < nav_more.length; i++) {
     success_franchise.style.height = `${successft.offsetHeight+success_ul_li[0].offsetHeight+success_ul_li[1].offsetHeight+200}px`
 
 
-
     show_more.addEventListener("click",function(){
         success_franchise.style.height = `${success_ul.offsetHeight + 100}px`
         show_more.style.opacity = '0'

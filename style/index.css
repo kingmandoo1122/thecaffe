@@ -25,16 +25,54 @@
     padding-top:200px;
 }
 
+.common_sub ul>li{
+    position: relative;
+}
+
+.common_sub ul>li::after{
+    position: absolute;
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 19px;
+    background: rgba(72, 42, 37, 0.7);
+
+}
+
+.common_sub ul>li:nth-of-type(1)::after{
+    top:7px;
+    left:237%;
+}
+
+.common_sub ul>li:nth-of-type(2)::after{
+    top: 7px;
+        right: -30px;
+}
+
+.common_sub ul>li:last-of-type::after{
+    display: none;
+}
+
+
+
+
+
+
 .common_sub ul{
     display: flex;
     align-items: center;
-    width: 300px;
-    justify-content: space-between;
+    width: 30%;;
     font-size: 20px;
     font-weight: 600;
 }
+
+.common_sub li:nth-of-type(1){
+    margin-right:60px;
+}
+
 .common_sub li:nth-of-type(2){
     color:rgba(51, 51, 51, 0.8);
+    margin-right: 60px;
 }
 .common_sub li:last-of-type{
     color:rgba(72, 42, 37, 0.9)
@@ -852,6 +890,7 @@ img[src="./img/menu_drink_smoothie/Citron_Smoothie.png"]
 
 .franchise_interview.second{
     background: url(../img/franchise_second.png) no-repeat 50% 50% / cover;
+    top:-100px
 }
 .franchise_interview.second::before{
     background: rgba(51, 51, 51, 0.7);
@@ -860,6 +899,7 @@ img[src="./img/menu_drink_smoothie/Citron_Smoothie.png"]
 .franchise_interview.third{
     background: url(../img/franchise_third.png) no-repeat 50% 50% / cover;
     margin-left:auto;
+    top:-100px
 }
 .franchise_interview.third::before{
     background: rgba(79, 76, 77, 0.6);

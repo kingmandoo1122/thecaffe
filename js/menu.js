@@ -35,18 +35,6 @@ window.onload =function(){
 
     let mid_change_div = document.querySelectorAll(".change_div")
 
-    let franchise_interview = document.querySelectorAll(".franchise_interview")
-
-
-    let sns_ul = document.querySelectorAll(".sns_ul")
-    let bannersec = document.querySelector(".bannersec")
-    let downtoupani = document.querySelectorAll(".downtoupani")
-    let opacityani = document.querySelectorAll(".opacityani")
-    let downtoupanilong =document.querySelectorAll(".downtoupanilong")
-
-
-
-
 
 
 
@@ -76,26 +64,6 @@ function makescrollani(tag,rate){
 }
 
 
-window.addEventListener("scroll",function(){
-    scroll = window.scrollY
-
-    makescrollani(franchise_interview,0.65)
-    makescrollani(downtoupani,0.7)
-    makescrollani(opacityani,0.7)
-    makescrollani(downtoupanilong,0.7)
-    makescrollani(sns_ul,0.7)
-
-
-
-    if (scroll > getitemtop(document.querySelector(".best_menu"))){
-        nav.classList.add("on")
-    }
-    else {
-        nav.classList.remove("on")
-    }
-
-}
-)
 
 // 스크롤 방향감지후 숨기기,나타내기 
 
@@ -1565,284 +1533,145 @@ window.addEventListener("wheel",function(e){
     let bot_sec_menu_ul_li = [bot_sec_menu_ul_li_0,bot_sec_menu_ul_li_1,bot_sec_menu_ul_li_2,bot_sec_menu_ul_li_3,bot_sec_menu_ul_li_4,bot_sec_menu_ul_li_5]
 
 
+    let menu_list = document.querySelector(".menu_list")
 
-    // 제품영양성분보기 클릭함수 제작
-    function menumoreclick(menu_more,popup_list){
-        menu_more.addEventListener("click",function(e){
-            e.preventDefault()
-            for(let i=0; i<popup.length;i++){
-                popup[i].classList.remove("show")
-                body.classList.add("lock")
-                nav.style.opacity = `0`
-            }
-            popup_list.classList.add("show")
-            modal.classList.add("show")
+    for(let i=0;i<best_menu_ul_li.length;i++){
+
+
+
+
+
+
+    best_menu_ul_li[i].addEventListener("click",function(){
+        best_menu_ul_li.forEach(function(li){
+            li.classList.remove("on")
         })
-    
-    }
-    // 함수 반복
-    for(let j=0;j<menu_more.length;j++){
-    menumoreclick(menu_more[j],popup[j])
-    }
-    
 
-
-    // 하단메뉴 클릭함수 제작
-    function botsecmenuulliclick(tag,midchangeimg,midchangediv,menupopupdiv,menupopupimg,imglist,changediv,popupdivlist){
-        for(let i=0; i<tag.length;i++){
-            tag[i].addEventListener("click",function(e){
-                    e.preventDefault()
-                    midchangeimg.innerHTML = imglist[i]
-                    midchangediv.innerHTML = changediv[i]
-                    menupopupdiv.innerHTML = popupdivlist[i]
-                    menupopupimg.innerHTML = imglist[i]
-                })
-            }
-    }
-
-    
-    // 함수 반복
-    for(let j=0; j<bot_sec_menu_ul_li.length;j++){
-        botsecmenuulliclick(bot_sec_menu_ul_li[j],mid_change_img[j],mid_change_div[j],menu_popup_div[j],menu_popup_img[j],img_list[j],change_div[j],popup_div_list[j])
-    }
-
-
-
-    // 팝업닫기버튼 클릭함수 제작
-    function popupclsbtnclick(tag,popup_list){
-        tag.addEventListener("click",function(e){
-            e.preventDefault()
-            popup_list.classList.remove("show")
-            modal.classList.remove("show")
-            body.classList.remove("lock")
-            nav.style.opacity = `1`
-        })
-    }
-
-    // 함ㅅ후 반복
-    for(let j=0;j<cls_btn.length;j++){
-        popupclsbtnclick(cls_btn[j],popup[j])
-    }
-
-    
-
-    // 상단 메뉴종류 탭 클릭시, 가운데 바뀜/하단바뀜 
-    for(let i=0; i<best_menu_ul_li.length;i++){
-        best_menu_ul_li[i].addEventListener("click",function(){
-            for(let j=0; j<best_menu_ul_li.length;j++){
-                best_menu_ul_li[j].classList.remove("on")
-                station[j].classList.remove("on")
-                mid_station[j].classList.remove("on")
-            }
-            best_menu_ul_li[i].classList.add("on")
-            station[i].classList.add("on")
-            mid_station[i].classList.add("on")
-        })
-    }
-
-
-
-
-    let mo_nav_ul_li = document.querySelectorAll("#nav_mo .nav_ul>li")
-    let mo_nav_ul_li_ul = document.querySelectorAll("#nav_mo .nav_ul>li>ul")
-    let nav_more = document.querySelectorAll("#nav_mo .nav_more")
-    let nav_ul_li_a = document.querySelectorAll("#nav_mo .nav_ul>li>a")
-    let count_list = [0,0,0,0,0]
-    let mo_nav_ul = document.querySelector("#nav_mo .nav_ul")
-    let open_nav = document.querySelector(".open_nav")
-    let close_nav = document.querySelector(".close_nav")
-    let nav_sns = document.querySelector(".nav_sns")
-    let line = document.querySelector(".line")
-    let line_two = document.querySelector(".line_two")
-    let mo_modal = document.querySelector("#nav_mo .modal")
-
-    open_nav.addEventListener("click",function(){
-        mo_nav_ul.style.right = `0`
-        close_nav.classList.add("on")
-        open_nav.classList.remove("on")
-        body.classList.add("lock")
-        mo_modal.classList.add("show")
-        nav_sns.style.right = `0`
-        line.style.right =`0`
-        line_two.style.right =`0`
-        mo_nav.classList.add("on")
-    })
-    close_nav.addEventListener("click",function(){
-        mo_nav_ul.style.right = `-100%`
-        open_nav.classList.add("on")
-        close_nav.classList.remove("on")
-        body.classList.remove("lock")
-        mo_modal.classList.remove("show")
-        nav_sns.style.right = `-100%`
-        line.style.right = `-100%`
-        line_two.style.right = `-100%`
-        mo_nav.classList.remove("on")
-    })
-
-    for(let i=0;i<nav_ul_li_a.length;i++){
-    nav_ul_li_a[i].addEventListener("click",function(e){
-        e.preventDefault()
+        best_menu_ul_li[i].classList.add("on")
+        menu_list.innerHTML = result[i]
+        getmenuinfo()
     })
 }
 
+let result = ["","","","","",""]
 
 
-    for (let i = 0; i < nav_more.length; i++) {
-        nav_more[i].addEventListener("click", function() {
-                if (count_list[i] == 0) {
-                    mo_nav_ul_li[i].style.height = `${mo_nav_ul_li_ul[i].offsetHeight}px`;
-                    nav_ul_li_a[i].classList.add("on");
-                    count_list[i] = 1;
+
+
+
+for(let j=0; j<result.length;j++){
+
+    for(let i=0;i<img_list[j].length;i++){
         
-                    for (let j = 0; j < nav_more.length; j++) {
-                        if (i !== j) {
-                            mo_nav_ul_li[j].style.height = `4%`;
-                            nav_ul_li_a[j].classList.remove("on");
-                            count_list[j] = 0;
-                        }
+        result[j] += `
+        <li>
+        ${img_list[j][i]}
+        ${change_div[j][i]}
+        <div class="menu_info">
+        ${change_div[j][i]}
+        ${popup_div_list[j][i]}
+        </div>
+        </li>
+    `
+    }
+
+
+}
+
+menu_list.innerHTML = result[0]
+
+
+
+let mo_nav_ul_li = document.querySelectorAll("#nav_mo .nav_ul>li")
+let mo_nav_ul_li_ul = document.querySelectorAll("#nav_mo .nav_ul>li>ul")
+let nav_more = document.querySelectorAll("#nav_mo .nav_more")
+let nav_ul_li_a = document.querySelectorAll("#nav_mo .nav_ul>li>a")
+let count_list = [0,0,0,0,0]
+let mo_nav_ul = document.querySelector("#nav_mo .nav_ul")
+let open_nav = document.querySelector(".open_nav")
+let close_nav = document.querySelector(".close_nav")
+let nav_sns = document.querySelector(".nav_sns")
+let line = document.querySelector(".line")
+let line_two = document.querySelector(".line_two")
+let mo_modal = document.querySelector("#nav_mo .modal")
+
+open_nav.addEventListener("click",function(){
+    mo_nav_ul.style.right = `0`
+    close_nav.classList.add("on")
+    open_nav.classList.remove("on")
+    body.classList.add("lock")
+    mo_modal.classList.add("show")
+    nav_sns.style.right = `0`
+    line.style.right =`0`
+    line_two.style.right =`0`
+    mo_nav.classList.add("on")
+})
+close_nav.addEventListener("click",function(){
+    mo_nav_ul.style.right = `-100%`
+    open_nav.classList.add("on")
+    close_nav.classList.remove("on")
+    body.classList.remove("lock")
+    mo_modal.classList.remove("show")
+    nav_sns.style.right = `-100%`
+    line.style.right = `-100%`
+    line_two.style.right = `-100%`
+    mo_nav.classList.remove("on")
+})
+
+
+for (let i = 0; i < nav_more.length; i++) {
+    nav_more[i].addEventListener("click", function() {
+            if (count_list[i] == 0) {
+                mo_nav_ul_li[i].style.height = `${mo_nav_ul_li_ul[i].offsetHeight}px`;
+                nav_ul_li_a[i].classList.add("on");
+                count_list[i] = 1;
+    
+                for (let j = 0; j < nav_more.length; j++) {
+                    if (i !== j) {
+                        mo_nav_ul_li[j].style.height = `4%`;
+                        nav_ul_li_a[j].classList.remove("on");
+                        count_list[j] = 0;
                     }
-    
-                } else if (count_list[i] == 1) {
-                    mo_nav_ul_li[i].style.height = `4%`;
-                    nav_ul_li_a[i].classList.remove("on");
-                    count_list[i] = 0;
                 }
-            });
+
+            } else if (count_list[i] == 1) {
+                mo_nav_ul_li[i].style.height = `4%`;
+                nav_ul_li_a[i].classList.remove("on");
+                count_list[i] = 0;
+            }
+        });
+    }
+
+
+
+
+    function getmenuinfo(){
+        let menu_li = document.querySelectorAll(".menu_list>li")
+        let menu_info = document.querySelectorAll(".menu_info")
+    
+        for(let i=0; i<menu_li.length;i++){
+            menu_li[i].addEventListener("click",function(){
+    
+                for(let j=0;j<menu_li.length;j++){
+                    menu_info[j].style.opacity =`0`
+                    menu_info[j].style.pointerEvents =`none`
+                }
+    
+                
+                menu_info[i].style.opacity =`1`
+                menu_info[i].style.pointerEvents=`auto`
+            })
         }
-    
-    
+
+
+    }
+getmenuinfo()
 
 
 
 
 
-
-
-    var swiper = new Swiper(".station_1", {
-        breakpoints: {
-            1: {
-              slidesPerView: 3,
-            },
-            1024: {
-              slidesPerView: 5,
-            },
-          },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      loop:true,
-      navigation: {
-        nextEl: ".btn_next",
-        prevEl: ".btn_prev",
-      },
-    })
-
-
-    var swiper = new Swiper(".station_2", {
-        breakpoints: {
-            1: {
-              slidesPerView: 3,
-            },
-            1024: {
-              slidesPerView: 5,
-            },
-          },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        loop:true,
-        navigation: {
-          nextEl: ".btn_next",
-          prevEl: ".btn_prev",
-        },
-  });
-  
-  
-
-    var swiper = new Swiper(".station_3", {
-        breakpoints: {
-            1: {
-              slidesPerView: 3,
-            },
-            1024: {
-              slidesPerView: 5,
-            },
-          },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        loop:true,
-        navigation: {
-          nextEl: ".btn_next",
-          prevEl: ".btn_prev",
-        },
-      })
-
-      var swiper = new Swiper(".station_4", {
-        breakpoints: {
-            1: {
-              slidesPerView: 3,
-            },
-            1024: {
-              slidesPerView: 5,
-            },
-          },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        loop:true,
-        navigation: {
-          nextEl: ".btn_next",
-          prevEl: ".btn_prev",
-        },
-      })
-
-      var swiper = new Swiper(".station_5", {
-        breakpoints: {
-            1: {
-              slidesPerView: 3,
-            },
-            1024: {
-              slidesPerView: 5,
-            },
-          },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        loop:true,
-        navigation: {
-          nextEl: ".btn_next",
-          prevEl: ".btn_prev",
-        },
-      })
-      var swiper = new Swiper(".station_6", {
-        breakpoints: {
-            1: {
-              slidesPerView: 3,
-            },
-            1024: {
-              slidesPerView: 5,
-            },
-          },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        loop:true,
-        navigation: {
-          nextEl: ".btn_next",
-          prevEl: ".btn_prev",
-        },
-      })
-
-
-
-
+   
 
 
 
