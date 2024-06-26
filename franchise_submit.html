@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>franchise_submit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/index_tablet.css">
+    <link rel="stylesheet" href="./style/index_mobile.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/font.css">
+    <link rel="stylesheet" href="./style/franchise.css">
+    <link rel="stylesheet" href="./style/franchise_tablet.css">
+    <link rel="stylesheet" href="./style/franchise_mobile.css">
+</head>
+<body>
+    <section class="submit">
+        <div class="inner_content">
+            <h1 class="bigft">가맹상담 신청하기</h1>
+            <form action="#">
+                <label for="name">이름</label><br>
+                <input id="name" type="text"><br>
+                <label for="phone">연락처</label><br>
+                <input class="phone" maxlength="3" id="phone" type="text"> - 
+                <input class="phone" maxlength="4" id="phone-1234" type="text"> - 
+                <input class="phone" maxlength="4" id="phone-5678" type="text"><br>
+                <label for="place">오픈 예정 지역</label><br>
+                <input id="place" type="text"><br>
+                <label for="storecheck">점포 유무</label><br>
+                <div class="check">
+                    <input id="check_yes" name="storecheck" type="radio">
+                    <label for="check_yes">있음</label><br>
+                </div>
+                <div class="check check_no">
+                    <input id="check_no" name="storecheck" type="radio">
+                    <label for="check_no">없음</label><br>
+                </div>
+                <label for="money">창업 예산</label><br>
+                <input id="money" type="text"><br>
+                <label for="question">궁금한 사항</label><br>
+                <textarea id="question">
+                </textarea><br>
+                <h4>개인정보 수집 및 이용 동의*</h4>
+                <div class="personal">
+                    <p class="title">개인정보 수집 및 이용 안내</p>
+                    <p class="explain">‘이랜드이츠 더카페 (이하 “더카페”)’는 아래와 같이 개인정보를 수집 및 이용하고자 합니다. 내용을 자세히 읽으신 후 동의 여부를 결정하여 주시기 바랍니다.</p>
+                    <ul>
+                        <li>1. 개인정보 수집 및 이용 목적<br>
+                            창업 상담 진행을 위한 정보 수집입니다.</li>
+                        <li> 2. 수집하는 개인정보 항목<br>
+                            이름, 연락처, 점포유무, 창업예산, 희망지역</li>
+                        <li>3. 개인정보 보유 및 이용기간<br>
+                            수집일로부터 6개월</li>
+                    </ul>
+
+                </div>
+                <div class="agree">
+                    <input id="agree" type="checkbox">
+                    <label for="agree">개인정보 수집 및 이용에 동의합니다.</label>
+                </div>
+                <input value="제출하기" type="submit">
+            </form>
+
+
+
+        </div>
+    </section>
+</body>
+</html>

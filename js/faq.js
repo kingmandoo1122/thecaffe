@@ -114,20 +114,6 @@ window.onload = function(){
         }
     
     
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

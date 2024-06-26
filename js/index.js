@@ -1709,16 +1709,21 @@ window.addEventListener("wheel",function(e){
                 }
             });
         }
-    
-    
+
+let enter_popup = document.querySelector(".enter_popup")
+let enter_modal = document.querySelector(".enter_modal")
+let enter_popup_cls_btn = document.querySelector(".enter_popup_cls_btn")
+enter_popup_cls_btn.addEventListener("click",function(e){
+    e.preventDefault()
+    enter_popup.classList.add("hide")
+    enter_modal.classList.add("hide")
+
+})
 
 
 
 
-
-
-
-    var swiper = new Swiper(".station_1", {
+    var swiper1 = new Swiper(".station_1", {
         breakpoints: {
             1: {
               slidesPerView: 3,
@@ -1727,6 +1732,7 @@ window.addEventListener("wheel",function(e){
               slidesPerView: 5,
             },
           },
+
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -1736,6 +1742,11 @@ window.addEventListener("wheel",function(e){
         nextEl: ".btn_next",
         prevEl: ".btn_prev",
       },
+    })
+
+
+    swiper1.on('slideChangeTransitionEnd', function () {
+        console.log(this.realIndex);
     })
 
 

@@ -19,6 +19,14 @@
     <script src="./js/franchise.js"></script>
 </head>
 <body>
+    <div class="floating_popup">
+        <h1>
+            <a href="tel:+16701588"><img src="./img/franchise/franchise_phone.png" alt="전화 버튼"></a>
+            <p><a href="tel:+16701588">1670<br>1558</a></p>
+        </h1>
+        <a class="submin_btn" target="_blank" href="./franchise_submit.html">상담<br>신청하기</a>
+        <a class="floating_popup_cls_btn" href="#"><img src="./img/close_btn.png" alt="닫기버튼"></a>
+    </div>
     <header id="nav_pc">
         <nav>
             <div class="inner_content">
@@ -44,8 +52,8 @@
                         </li>
                         <li><a class="now" href="franchise.html">창업 안내</a>
                             <ul>
+                                <li><a class="now" href="franchise.html">가맹 안내</a></li>
                                 <li><a href="franchise.html">더카페 경쟁력</a></li>
-                                <li><a href="franchise.html">가맹 안내</a></li>
                                 <li><a href="franchise.html">인테리어</a></li>
                                 <li><a href="franchise.html">가맹 비용</a></li>
                                 <li><a href="franchise.html">창업스토리</a></li>
@@ -59,9 +67,9 @@
                                 <li><a href="faq.html">인테리어</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">매장 안내</a>
+                        <li><a href="franchise.html">매장 안내</a>
                             <ul>
-                                <li><a href="#">매장 찾기</a></li>
+                                <li><a href="franchise.html">매장 찾기</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -76,9 +84,9 @@
             <div class="nav_sns">
                 <h1>Follow Us</h1>
                 <ul>
-                    <li><a href="#"><img src="./img/nav_facebook.svg" alt="페이스북"></a></li>
-                    <li><a href="#"><img src="./img/nav_instagram.svg" alt="인스타그램"></a></li>
-                    <li><a href="#"><img src="./img/nav_youtube.svg" alt="유튜브"></a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/ROASTINGFACTORY.THECAFFE"><img src="./img/sns_facebook.svg" alt="페이스북"></a></li>
+                    <li><a target="_blank" href="https://www.instagram.com/thecaffe_official/"><img src="./img/sns_instagram.svg" alt="인스타그램"></a></li>
+                    <li><a target="_blank" href="https://www.youtube.com/channel/UCZrO8MIoLzl62v9VZjslpfg"><img src="./img/sns_youtube.svg" alt="유튜브"></a></li>
                 </ul>
             </div>
             <div class="modal"></div>
@@ -88,7 +96,6 @@
                 <div class="lnb">
                     <a href="index.html" class="logo"></a>
                     <ul class="nav_ul">
-
                         <li><a href="brand_story.html">더카페 스토리</a><span class="nav_more on"></span>
                             <ul>
                                 
@@ -127,10 +134,10 @@
                                 <li><a href="faq.html">인테리어</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">매장 안내</a>
+                        <li><a href="franchise.html">매장 안내</a>
                             <span class="nav_more"></span>
                             <ul>
-                                <li><a href="#">매장 찾기</a></li>
+                                <li><a href="franchise.html">매장 찾기</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -471,58 +478,6 @@
                 </div>
             </div>
         </section>
-        <section class="submit">
-            <div class="inner_content">
-                <h1 class="bigft">가맹상담 신청하기</h1>
-                <form action="#">
-                    <label for="name">이름</label><br>
-                    <input id="name" type="text"><br>
-                    <label for="phone">연락처</label><br>
-                    <input class="phone" maxlength="3" id="phone" type="text"> - 
-                    <input class="phone" maxlength="4" id="phone-1234" type="text"> - 
-                    <input class="phone" maxlength="4" id="phone-5678" type="text"><br>
-                    <label for="place">오픈 예정 지역</label><br>
-                    <input id="place" type="text"><br>
-                    <label for="storecheck">점포 유무</label><br>
-                    <div class="check">
-                        <input id="check_yes" name="storecheck" type="radio">
-                        <label for="check_yes">있음</label><br>
-                    </div>
-                    <div class="check check_no">
-                        <input id="check_no" name="storecheck" type="radio">
-                        <label for="check_no">없음</label><br>
-                    </div>
-                    <label for="money">창업 예산</label><br>
-                    <input id="money" type="text"><br>
-                    <label for="question">궁금한 사항</label><br>
-                    <textarea id="question">
-                    </textarea><br>
-                    <h4>개인정보 수집 및 이용 동의*</h4>
-                    <div class="personal">
-                        <p class="title">개인정보 수집 및 이용 안내</p>
-                        <p class="explain">‘이랜드이츠 더카페 (이하 “더카페”)’는 아래와 같이 개인정보를 수집 및 이용하고자 합니다. 내용을 자세히 읽으신 후 동의 여부를 결정하여 주시기 바랍니다.</p>
-                        <ul>
-                            <li>1. 개인정보 수집 및 이용 목적<br>
-                                창업 상담 진행을 위한 정보 수집입니다.</li>
-                            <li> 2. 수집하는 개인정보 항목<br>
-                                이름, 연락처, 점포유무, 창업예산, 희망지역</li>
-                            <li>3. 개인정보 보유 및 이용기간<br>
-                                수집일로부터 6개월</li>
-                        </ul>
-
-                    </div>
-                    <div class="agree">
-                        <input id="agree" type="checkbox">
-                        <label for="agree">개인정보 수집 및 이용에 동의합니다.</label>
-                    </div>
-                    <input value="제출하기" type="submit">
-                </form>
-
-
-
-            </div>
-        </section>
-
     </main>
     <footer>
         <span class="foot_line"></span>
@@ -530,11 +485,11 @@
             <div class="foot_top">
                 <h1><a href="index.html"><img src="./img/footer_logo.svg" alt="하단더카페로고"></a></h1>
                 <ul>
-                    <li><a href="#">더카페 소개</a></li>
-                    <li><a href="#">고객의 소리</a></li>
-                    <li><a href="#">개인정보 처리방침</a></li>
-                    <li><a href="#">제휴/제안</a></li>
-                    <li><a href="#">이용약관</a></li>
+                    <li><a href="brand_story.html">더카페 소개</a></li>
+                    <li><a href="brand_story.html">고객의 소리</a></li>
+                    <li><a href="brand_story.html">개인정보 처리방침</a></li>
+                    <li><a href="brand_story.html">제휴/제안</a></li>
+                    <li><a href="brand_story.html">이용약관</a></li>
                 </ul>
             </div>
             <div class="foot_bottom">
@@ -581,9 +536,9 @@
                     </div>
                     <div class="fortablet">
                         <ul class="sns_direct_ul">
-                            <li><a href="#"><img src="./img/sns_instagram.svg" alt="인스타그램"></a></li>
-                            <li><a href="#"><img src="./img/sns_facebook.svg" alt="페이스북"></a></li>
-                            <li><a href="#"><img src="./img/sns_youtube.svg" alt="유튜브"></a></li>
+                            <li><a target="_blank" href="https://www.instagram.com/thecaffe_official/"><img src="./img/sns_instagram.svg" alt="인스타그램"></a></li>
+                            <li><a target="_blank" href="https://www.facebook.com/ROASTINGFACTORY.THECAFFE"><img src="./img/sns_facebook.svg" alt="페이스북"></a></li>
+                            <li><a target="_blank" href="https://www.youtube.com/channel/UCZrO8MIoLzl62v9VZjslpfg"><img src="./img/sns_youtube.svg" alt="유튜브"></a></li>
                         </ul>
                         <form class="familyform" action="#">
                             <select>

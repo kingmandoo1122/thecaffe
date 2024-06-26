@@ -270,6 +270,7 @@
     .level .inner_content{
         padding-top:150px;
         font-weight: 500;
+        padding-bottom: 200px;
     }
     .level .bigft{
         text-align: center;
@@ -596,10 +597,61 @@
     
     
 
+@keyframes floating_popup_ani {
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+
+
+    
 
 
 
 
+
+    .floating_popup{
+        position: fixed;
+        right:1%;
+        top:calc(50vh - 200px);
+        width: 90px;
+        height: 400px;
+        border-radius: 5px 40px 5px 40px;
+        background: rgba(72, 42, 37, 0.8);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color:#fff;
+        text-align: center;
+        animation: floating_popup_ani 1s ease;
+        transition: all 1s ease 0s;
+        z-index: 1;
+    }
+    
+    .floating_popup>h1{
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom:60px;
+    }
+    
+    
+    
+    
+    .floating_popup_cls_btn{
+        position: absolute;
+            top: 20px;
+            left: 13px;
+    }
+    
+    
 
 
 

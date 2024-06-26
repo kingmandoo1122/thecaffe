@@ -151,13 +151,14 @@ for (let i = 0; i < nav_more.length; i++) {
     let successft = document.querySelector(".success_franchise.mobile .bigft")
     let show_more = document.querySelector(".success_franchise.mobile .show_more")
     let success_ul = document.querySelector(".success_franchise.mobile .success_ul")
-    console.log(successft.offsetHeight)
+    // console.log(successft.offsetHeight)
     let success_ul_li = document.querySelectorAll(".success_franchise.mobile .success_ul>li")
-    console.log(success_ul_li[0].offsetHeight)
-    console.log(success_ul_li[1].offsetHeight)
-
+    // console.log(success_ul_li[0].offsetHeight)
+    // console.log(success_ul_li[1].offsetHeight)
+    let floating_popup_cls_btn = document.querySelector(".floating_popup_cls_btn")
+    let floating_popup =document.querySelector(".floating_popup")
     success_franchise.style.height = `${successft.offsetHeight+success_ul_li[0].offsetHeight+success_ul_li[1].offsetHeight+200}px`
-
+    let submin_btn = document.querySelector(".submin_btn")
 
     show_more.addEventListener("click",function(){
         success_franchise.style.height = `${success_ul.offsetHeight + 100}px`
@@ -167,7 +168,32 @@ for (let i = 0; i < nav_more.length; i++) {
 
 
 
+    floating_popup_cls_btn.addEventListener("click",function(e){
+        e.preventDefault()
+        if (matchMedia("screen and (max-width: 768px)").matches) {
+            floating_popup.style.transform = `translateX(100%)`
+        floating_popup.style.opacity = `0`
+        }
+        else{
+        floating_popup.style.transform = `translateY(-100px)`
+        floating_popup.style.opacity = `0`
+        }
+    })
+    submin_btn.addEventListener("click",function(e){
+        let viewportwidth = window.innerWidth
+        e.preventDefault()
+        if (matchMedia("screen and (max-width: 768px)").matches) {
+            window.open(this.href, `_blank`, `width=${viewportwidth}, height=1000`);
+            return false;
+        }
+        else{
+            window.open(this.href, `_blank`, `width=1200, height=1000`);
+            return false;
+        }
+        
+        
 
+    })
 
 
 
