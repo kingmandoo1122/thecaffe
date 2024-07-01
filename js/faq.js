@@ -340,7 +340,7 @@ let nextlist
 
 let count = 1
 
-console.log(prevlist)
+// console.log(prevlist)
 
 for(let i=1; i<numberli.length-1 ; i++){
 
@@ -402,7 +402,7 @@ for(let i=0;i<faq_title_ul_li.length;i++){
 
         e.preventDefault()
         let cate_name = this.getAttribute("data-name")
-        console.log(cate_name)
+        // console.log(cate_name)
         let new_array = []
 
         faq_info_array.map(function(item){
@@ -478,7 +478,7 @@ document.querySelector(".left_arrow1").addEventListener("click",function(e){
 
     numberli[count].classList.add("on")
 
-        console.log(count)
+        // console.log(count)
     })
     
     if(count==1){

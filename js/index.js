@@ -1746,7 +1746,7 @@ enter_popup_cls_btn.addEventListener("click",function(e){
 
 
     swiper1.on('slideChangeTransitionEnd', function () {
-        console.log(this.realIndex);
+        // console.log(this.realIndex);
     })
 
 
