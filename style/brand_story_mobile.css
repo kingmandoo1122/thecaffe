@@ -33,9 +33,7 @@
             align-items: center;
         }
         
-        .introduce_div{
-           
-        }
+
         .introduce_div .bigft{
             margin-bottom:30px;
             font-weight: 500;
@@ -54,7 +52,8 @@
         
         .vision .inner_content{
             padding-top:100px;
-            padding-bottom:50px;        }
+            padding-bottom:50px; 
+        }
         
         .vision .bigft{
             font-weight: 500;
