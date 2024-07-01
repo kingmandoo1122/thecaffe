@@ -478,7 +478,6 @@ document.querySelector(".left_arrow1").addEventListener("click",function(e){
 
     numberli[count].classList.add("on")
 
-        // console.log(count)
     })
     
     if(count==1){
