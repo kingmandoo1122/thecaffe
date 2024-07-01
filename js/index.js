@@ -125,25 +125,6 @@ window.addEventListener("wheel",function(e){
 
 })
 
-window.addEventListener("wheel",function(e){
-    let checkwheeldirection = e.deltaY
-
-    if(checkwheeldirection>0){
-        num_up++
-        if(num_up>2){
-            mo_nav.classList.add("hide")
-            num_up=0
-        }
-    }
-    if(checkwheeldirection<0){
-        num_down++
-        if(num_down>2){
-            mo_nav.classList.remove("hide")
-        }
-    }
-
-})
-
 
 
 
