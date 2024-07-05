@@ -67,9 +67,15 @@
         color:rgba(51, 51, 51, 0.9);
         line-height: 170%;
     }
-    .step .smallft br{
+
+
+    .step1_div .specialbr {
         display: none;
     }
+    .step3_div .specialbr {
+        display: none;
+    }
+
     .point1{
         color:#fff;
         position: relative;
